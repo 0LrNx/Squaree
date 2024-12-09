@@ -15,7 +15,7 @@ const dmsans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Challenge Spikes",
+  title: "Squaree",
   description: "Challenge Spikes by @0xEzis",
 };
 
