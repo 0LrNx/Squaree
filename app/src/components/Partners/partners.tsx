@@ -4,7 +4,7 @@ import Bubble from "@/public/featured/Bubble.svg";
 import Fluid from "@/public/featured/Fluid.svg";
 import Hikkeno from "@/public/featured/Hikkeno.svg";
 
-function Parteners() {
+function Partners() {
     return (
         <div className="flex flex-col justify-center items-center text-dark text-xl font-dmsans font-medium pt-32">
             <h2 className="mb-8">We have the fast paced growing companies with us</h2>
@@ -28,4 +28,4 @@ function Parteners() {
     );
 }
 
-export default Parteners;
+export default Partners;
