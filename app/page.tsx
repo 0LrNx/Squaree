@@ -4,6 +4,7 @@ import ImageHero from "@/app/src/components/Hero/imgHero"
 import Partners from "@/app/src/components/Partners/partners"
 import Growth from "@/app/src/components/Growth/growth"
 import Productivity from "./src/components/Productivity/productivity";
+import Integration from "@/app/src/components/Integration/integration"
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
     <Partners />
     <Growth />
     <Productivity />
+    <Integration />
   </main>
   )
 }
