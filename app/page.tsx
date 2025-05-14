@@ -5,6 +5,7 @@ import Partners from "@/app/src/components/Partners/partners"
 import Growth from "@/app/src/components/Growth/growth"
 import Productivity from "./src/components/Productivity/productivity";
 import Integration from "@/app/src/components/Integration/integration"
+import Testimonials from "./src/components/Testimonials/testimonials";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
     <Growth />
     <Productivity />
     <Integration />
+    <Testimonials />
   </main>
   )
 }
