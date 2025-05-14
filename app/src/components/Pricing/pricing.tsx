@@ -30,30 +30,64 @@ const pricingData: OfferCardProps[] = [
 ];
 
 export default function Pricing() {
-    const [selectedBilledType, setSelectedBilledType] =
-        useState<BilledType>("monthly");
+    const [selectedBilledType, setSelectedBilledType] = useState<BilledType>("monthly");
+
     function handleSwitchTab(tab: BilledType) {
         setSelectedBilledType(tab);
     }
+
+    const containerVariants = {
+        hidden: {},
+        visible: {
+            transition: {
+                staggerChildren: 0.2,
+            },
+        },
+    };
+
+    const cardVariants = {
+        hidden: { opacity: 0, y: 40, scale: 0.95 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            transition: {
+                duration: 0.6,
+                ease: "easeOut",
+            },
+        },
+    };
+
     return (
-        <div className="flex flex-col items-center gap-4">
-            {/* <SelectOfferTab
+        <div className="flex flex-col items-center gap-12 py-24">
+            <PricingSwitch
                 handleSwitchTab={handleSwitchTab}
                 selectedBilledType={selectedBilledType}
-            /> */}
-            <PricingSwitch handleSwitchTab={handleSwitchTab} selectedBilledType={selectedBilledType} />
-            <div className="flex flex-row gap-12 justify-center">
-                {pricingData.map((offer) => (
-                    <OfferCard
+            />
+
+            <motion.div
+                className="flex flex-row gap-12 justify-center"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+            >
+                {pricingData.map((offer, index) => (
+                    <motion.div
                         key={offer.title}
-                        {...offer}
-                        selectedBilledType={selectedBilledType}
-                    />
+                        variants={cardVariants}
+                    >
+                        <OfferCard
+                            {...offer}
+                            selectedBilledType={selectedBilledType}
+                        />
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </div>
     );
 }
+
 
 type OfferCardProps = {
     title: string;

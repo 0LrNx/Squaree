@@ -1,11 +1,23 @@
-import CardTestimonials from "@/components/cards/CardsTestimonials"
+"use client";
+import { motion } from "framer-motion";
+import CardTestimonials from "@/components/cards/CardsTestimonials";
 
 function Testimonials() {
     return (
-        <section className="container mx-auto px-4 py-16 w-4/6">
+        <motion.section
+            className="container mx-auto px-4 py-16 w-4/6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+        >
             <div className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl text-dark font-bold font-dmsans mb-2">What squaree users say</h2>
-                <p className="text-gray-600 text-lg font-manrope">Here is how homely can help you</p>
+                <h2 className="text-4xl md:text-5xl text-dark font-bold font-dmsans mb-2">
+                    What squaree users say
+                </h2>
+                <p className="text-gray-600 text-lg font-manrope">
+                    Here is how homely can help you
+                </p>
             </div>
 
             <div className="flex h-full w-full items-center justify-center">
@@ -18,6 +30,7 @@ function Testimonials() {
                         name="John Master"
                         position="Director, Blue"
                     />
+
                     <CardTestimonials
                         className="col-span-2 row-span-1"
                         title="Convenient for searching apartments"
@@ -26,6 +39,7 @@ function Testimonials() {
                         name="John Master"
                         position="CEO, Jinx"
                     />
+
                     <CardTestimonials
                         className="col-span-2 row-span-1"
                         title="It feels much more safe"
@@ -34,6 +48,7 @@ function Testimonials() {
                         name="John Master"
                         position="Director, Fyrx"
                     />
+
                     <CardTestimonials
                         className="col-span-1 row-span-1"
                         title="Secure search for all"
@@ -44,8 +59,8 @@ function Testimonials() {
                     />
                 </div>
             </div>
-        </section>
-    )
+        </motion.section>
+    );
 }
 
-export default Testimonials
+export default Testimonials;

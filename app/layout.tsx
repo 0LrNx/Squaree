@@ -16,7 +16,7 @@ const dmsans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "Squaree",
-  description: "Challenge Spikes by @0xEzis",
+  description: "Challenge Spikes by @0xEzis | Realised by FISS",
 };
 
 export default function RootLayout({
