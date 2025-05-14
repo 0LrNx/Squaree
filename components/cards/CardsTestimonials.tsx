@@ -1,11 +1,11 @@
-interface CardTestimonialsProps {
+type CardTestimonialsProps = {
+    className: string;
     title: string;
-    description?: string;
+    description: string;
     img: string;
     name: string;
     position: string;
-    className?: string;
-}
+};
 
 function CardTestimonials({ title, description, img, name, position, className }: CardTestimonialsProps) {
     return (
