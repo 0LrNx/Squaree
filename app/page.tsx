@@ -3,6 +3,7 @@ import TextHero from "@/app/src/components/Hero/textHero"
 import ImageHero from "@/app/src/components/Hero/imgHero"
 import Partners from "@/app/src/components/Partners/partners"
 import Growth from "@/app/src/components/Growth/growth"
+import Productivity from "./src/components/Productivity/productivity";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
     <ImageHero />
     <Partners />
     <Growth />
+    <Productivity />
   </main>
   )
 }
