@@ -7,6 +7,7 @@ import Productivity from "./src/components/Productivity/productivity";
 import Integration from "@/app/src/components/Integration/integration"
 import Testimonials from "./src/components/Testimonials/testimonials";
 import Pricing from "@/app/src/components/Pricing/pricing";
+import Footer from "@/app/src/components/Footer/footer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
     <Integration />
     <Testimonials />
     <Pricing />
+    <Footer />
   </main>
   )
 }
